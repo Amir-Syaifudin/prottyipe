@@ -5,10 +5,6 @@
     "appmode": "shiny",
     "entrypoint": "app.R"
   },
-  "platform": {
-    "type": "R",
-    "version": "4.3.0"
-  },
   "files": {
     "app.R": {
       "checksum": "5d41402abc4b2a76b9719d911017c592"
@@ -80,8 +76,5 @@
         "repository": "CRAN"
       }
     ]
-  },
-  "python": null,
-  "quarto": null,
-  "environment": {}
+  }
 }
