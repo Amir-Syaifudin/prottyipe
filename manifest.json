@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "locale": "id_ID",
+  "metadata": {
+    "appmode": "shiny",
+    "entrypoint": "app.R"
+  },
+  "files": {
+    "app.R": {
+      "checksum": "auto"
+    },
+    "global.R": {
+      "checksum": "auto"
+    },
+    "DESCRIPTION": {
+      "checksum": "auto"
+    },
+    "modules/leader_module.R": {
+      "checksum": "auto"
+    },
+    "modules/manager_module.R": {
+      "checksum": "auto"
+    },
+    "modules/worker_module.R": {
+      "checksum": "auto"
+    },
+    "data/db_connect.R": {
+      "checksum": "auto"
+    },
+    "www/custom.css": {
+      "checksum": "auto"
+    },
+    "database_schema.sql": {
+      "checksum": "auto"
+    }
+  },
+  "packages": {
+    "R": "4.3.0",
+    "shiny": "1.7.5",
+    "shinydashboard": "0.7.2",
+    "DBI": "1.1.3",
+    "RMariaDB": "1.2.2",
+    "pool": "1.0.1",
+    "DT": "0.28",
+    "ggplot2": "3.4.2",
+    "dplyr": "1.1.2",
+    "lubridate": "1.9.2"
+  }
+}

@@ -1,0 +1,18 @@
+Title: SI-PRIMA Dashboard
+Type: Shiny
+Author: BPS Development Team
+Maintainer: BPS Development Team <dev@bps.go.id>
+Description: Dashboard monitoring progress tugas untuk BPS menggunakan R Shiny dengan fitur multi-role authentication, task management, dan reporting.
+License: MIT
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    shiny (>= 1.7.0),
+    shinydashboard (>= 0.7.0),
+    DBI (>= 1.1.0),
+    RMariaDB (>= 1.2.0),
+    pool (>= 1.0.0),
+    DT (>= 0.28),
+    ggplot2 (>= 3.4.0),
+    dplyr (>= 1.1.0),
+    lubridate (>= 1.9.0)
