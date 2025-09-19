@@ -1,0 +1,501 @@
+/* SI-PRIMA Dashboard Custom Styling */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+/* Root Variables */
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary-color: #64748b;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --light-bg: #f8fafc;
+  --dark-bg: #1e293b;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--light-bg);
+  color: #334155;
+  line-height: 1.6;
+}
+
+/* Dashboard Header Styling */
+.main-header {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  border: none;
+  box-shadow: var(--card-shadow);
+}
+
+.main-header .navbar {
+  background: transparent;
+  border: none;
+}
+
+.main-header .navbar-brand {
+  color: white !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+}
+
+.main-header .navbar-nav > li > a {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: var(--transition);
+}
+
+.main-header .navbar-nav > li > a:hover {
+  color: white !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Logout Button Styling */
+#logout_btn {
+  background: var(--danger-color) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 8px 16px !important;
+  font-weight: 500 !important;
+  transition: var(--transition) !important;
+  margin: 8px 15px !important;
+}
+
+#logout_btn:hover {
+  background: #dc2626 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3) !important;
+}
+
+/* Sidebar Styling */
+.main-sidebar {
+  background: white;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #e2e8f0;
+}
+
+.sidebar-menu > li > a {
+  color: var(--secondary-color);
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 0 25px 25px 0;
+  margin: 4px 0 4px 15px;
+  transition: var(--transition);
+}
+
+.sidebar-menu > li > a:hover,
+.sidebar-menu > li.active > a {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+}
+
+.sidebar-menu > li > a > .fa,
+.sidebar-menu > li > a > .glyphicon,
+.sidebar-menu > li > a > .ion {
+  margin-right: 10px;
+  font-size: 1.1rem;
+}
+
+/* Content Area */
+.content-wrapper {
+  background-color: var(--light-bg);
+  min-height: calc(100vh - 50px);
+}
+
+.content {
+  padding: 20px;
+}
+
+/* Login Page Styling */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border: 2px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: var(--transition);
+  background-color: #f8fafc;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  background-color: white;
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  border-radius: var(--border-radius);
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary,
+#login_btn {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn-primary:hover,
+#login_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-success {
+  background: var(--success-color);
+  color: white;
+}
+
+.btn-warning {
+  background: var(--warning-color);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--danger-color);
+  color: white;
+}
+
+/* Box/Card Styling */
+.box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  margin-bottom: 20px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.box:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.box-header {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  padding: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.box-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.box-body {
+  padding: 20px;
+}
+
+/* Info Box Styling */
+.box.box-solid.box-info {
+  border-left: 4px solid var(--primary-color);
+}
+
+.box.box-solid.box-info .box-header {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+}
+
+/* DataTable Styling */
+.dataTables_wrapper {
+  margin-top: 20px;
+}
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter {
+  margin-bottom: 20px;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  border: 2px solid #e2e8f0;
+  border-radius: var(--border-radius);
+  padding: 8px 12px;
+  margin-left: 10px;
+}
+
+.table {
+  background: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+}
+
+.table thead th {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 15px;
+}
+
+.table tbody tr {
+  transition: var(--transition);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+.table tbody td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* Progress Bars */
+.progress {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e2e8f0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, var(--success-color), #059669);
+  transition: width 0.6s ease;
+}
+
+/* Notifications */
+.shiny-notification {
+  border-radius: var(--border-radius);
+  border: none;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+}
+
+.shiny-notification-message {
+  background: var(--success-color);
+  color: white;
+}
+
+.shiny-notification-error {
+  background: var(--danger-color);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+    padding: 15px;
+  }
+
+  .login-form {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+
+  .box-body {
+    padding: 15px;
+  }
+
+  .main-header .navbar-brand {
+    font-size: 1.25rem;
+  }
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Status Indicators */
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+.status-pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.status-completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+}
+
+.status-overdue {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* SelectizeInput Dropdown Styling and Scroll Fix */
+.selectize-dropdown {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: var(--border-radius) !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1) !important;
+  z-index: 9999 !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin-top: 2px !important;
+}
+
+.selectize-dropdown-content {
+  max-height: 180px !important;
+  overflow-y: auto !important;
+}
+
+.selectize-dropdown .option {
+  padding: 10px 15px !important;
+  border-bottom: 1px solid #f1f5f9 !important;
+  transition: var(--transition) !important;
+  cursor: pointer !important;
+}
+
+.selectize-dropdown .option:hover,
+.selectize-dropdown .option.active {
+  background-color: rgba(37, 99, 235, 0.1) !important;
+  color: var(--primary-color) !important;
+}
+
+.selectize-dropdown .option:last-child {
+  border-bottom: none !important;
+}
+
+.selectize-control {
+  margin-bottom: 15px !important;
+}
+
+.selectize-input {
+  border: 2px solid #e2e8f0 !important;
+  border-radius: var(--border-radius) !important;
+  padding: 12px 16px !important;
+  font-size: 1rem !important;
+  transition: var(--transition) !important;
+  background-color: #f8fafc !important;
+  min-height: 45px !important;
+}
+
+.selectize-input:focus,
+.selectize-input.focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+  background-color: white !important;
+  outline: none !important;
+}
+
+.selectize-input.dropdown-active {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Ensure dropdown appears above other elements */
+.selectize-control.single .selectize-dropdown {
+  z-index: 10000 !important;
+}
+
+/* Custom scrollbar for selectize dropdown */
+.selectize-dropdown::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.selectize-dropdown::-webkit-scrollbar-track {
+  background: #f1f5f9 !important;
+  border-radius: 3px !important;
+}
+
+.selectize-dropdown::-webkit-scrollbar-thumb {
+  background: var(--secondary-color) !important;
+  border-radius: 3px !important;
+}
+
+.selectize-dropdown::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color) !important;
+}
